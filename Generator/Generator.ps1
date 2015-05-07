@@ -1,4 +1,9 @@
-﻿$Script:PathToModule = 'D:\Nana\Official\git'
+﻿# Set this to the path where you want the module to 
+# be generated. This has been set to a temporary
+# location to prevent overriding the existing code
+# during the demo
+#$Script:PathToModule = 'D:\Nana\Official\git'
+$Script:PathToModule = "$($env:TEMP)\Modules"
 
 $Properties = @{}
 $Properties += @{
@@ -29,4 +34,10 @@ $Properties += @{
                                      -ValidateSet 'Automatic', 'Manual', 'Disabled')
 }
 
-New-xDscResource -Name 'Nana_nService' -Property $Properties.Values -Path $Script:PathToModule -ModuleName nPSDesiredStateConfiguration -ClassVersion 0.1.0.0 -FriendlyName nService -Verbose
+New-xDscResource -Name 'Nana_nService' `
+                 -Property $Properties.Values `
+                 -Path $Script:PathToModule `
+                 -ModuleName nPSDesiredStateConfiguration `
+                 -ClassVersion 0.1.0.0 `
+                 -FriendlyName nService `
+                 -Verbose
