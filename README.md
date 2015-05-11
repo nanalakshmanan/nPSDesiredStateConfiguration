@@ -1,1 +1,2 @@
 # nPSDesiredStateConfiguration
+This module contains the demo service resouce - **Nana_nService** - that was shown as part of <B>BRK4452 - Writing Windows PowerShell DSC Resources and Configurations</B> at <B>MSIgnite 2015</B> (*Video of the session can be viewed [here](http://channel9.msdn.com/events/Ignite/2015/BRK4452)*)
