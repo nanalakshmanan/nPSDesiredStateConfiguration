@@ -24,14 +24,16 @@ $Properties += @{
                                      -Type        String  `
                                      -Attribute   Required `
                                      -Description 'State to set the service to' `
-                                     -ValidateSet 'Running', 'Stopped');
+                                     -ValueMap    'Running', 'Stopped' `
+                                     -Values      'Running', 'Stopped');
 
     'StartupType' = (          
             New-xDscResourceProperty -Name        'StartupType' `
                                      -Type        String `
                                      -Attribute   Write `
                                      -Description 'StartupType to set for the service' `
-                                     -ValidateSet 'Automatic', 'Manual', 'Disabled')
+                                     -ValueMap    'Automatic', 'Manual', 'Disabled' `
+                                     -Values      'Automatic', 'Manual', 'Disabled')
 }
 
 New-xDscResource -Name 'Nana_nService' `
